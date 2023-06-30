@@ -1,6 +1,7 @@
 import React from 'react';
 import { ITodo } from 'apis/todo';
 import TodoItem from './TodoItem';
+import * as S from './TodoList.style'
 
 interface TodoItemProps {
   todos: ITodo[];
@@ -8,11 +9,11 @@ interface TodoItemProps {
 }
 const TodoList = ({ todos, getTodoList }: TodoItemProps) => {
   return (
-    <ul>
+    <S.TodoListWrap>
       {todos.map((data: ITodo) => (
         <TodoItem key={data.id} todo={data} getTodoList={getTodoList} />
       ))}
-    </ul>
+    </S.TodoListWrap>
   );
 };
 

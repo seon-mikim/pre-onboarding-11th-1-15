@@ -11,8 +11,14 @@ export const Wrapper = styled.form`
 `;
 
 export const Label = styled.label`
+  display: flex;
   font-weight: 500;
   font-size: 20px;
-
   text-align: start;
 `;
+
+export const ButtonWrap = styled.div`
+button{
+  margin-left: 10px;
+}
+`

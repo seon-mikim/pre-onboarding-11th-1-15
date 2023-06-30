@@ -90,10 +90,10 @@ const TodoItem = ({ todo, getTodoList }: TodoItemProps) => {
       <S.Wrapper>
         <S.Label>
           <Input type="checkbox" id={todo.id.toString()} checked={todoCompleted} onChange={handleCompleteTodo} />
-          {!isOnEdit ? <span>{todo.todo}</span> : <Input {...InputProps} />}
+          {!isOnEdit ? <span>{todo.todo}</span> : <Input {...InputProps} width='250px' height='20px' />}
         </S.Label>
         {!isOnEdit && (
-          <>
+          <S.ButtonWrap>
             <Button
               size="medium"
               data-testid="modify-button"
@@ -101,10 +101,10 @@ const TodoItem = ({ todo, getTodoList }: TodoItemProps) => {
               onClick={() => setIsOnEdit((prev) => !prev)}
             />
             <Button size="medium" data-testid="delete-button" name="삭제" onClick={(e) => handleDelete(e, todo)} />
-          </>
+          </S.ButtonWrap>
         )}
         {isOnEdit && (
-          <>
+          <S.ButtonWrap>
             <Button
               size="medium"
               data-testid="submit-button"
@@ -113,7 +113,7 @@ const TodoItem = ({ todo, getTodoList }: TodoItemProps) => {
               disabled={!isUpdateInputValidated}
             />
             <Button size="medium" data-testid="cancel-button" onClick={handleCancel} name="취소" />
-          </>
+          </S.ButtonWrap>
         )}
       </S.Wrapper>
     </S.Item>

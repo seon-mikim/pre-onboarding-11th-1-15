@@ -24,7 +24,7 @@ const TodoInput = (props: { getTodoList: () => {} }) => {
     error: isError,
     placeholder: '할일을 적어보세요!',
     dataTestId: 'new-todo-input',
-    width: '100%',
+    width: '400px',
     height: '50px',
     disabled: isLoading,
     type: 'text',

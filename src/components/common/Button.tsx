@@ -1,9 +1,11 @@
 import React from 'react';
-import { Sbutton } from './Button.style';
+import * as S from './Button.style';
 
 export interface IButton extends Omit<React.HTMLProps<HTMLButtonElement>, 'size'> {
   size: 'small' | 'medium' | 'large';
 }
+
+// export interface IInput extends React.HTMLProps<HTMLInputElement>
 
 /**
  *
@@ -22,9 +24,9 @@ export interface IButton extends Omit<React.HTMLProps<HTMLButtonElement>, 'size'
 
 function Button({ size, name, ...props }: IButton) {
   return (
-    <Sbutton size={size} {...props}>
+    <S.Button size={size} {...props}>
       {name}
-    </Sbutton>
+    </S.Button>
   );
 }
 

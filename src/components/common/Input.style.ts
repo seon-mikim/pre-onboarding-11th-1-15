@@ -33,6 +33,8 @@ export const InputWrap = styled.div<IInputWrapperProps>`
   width: ${(props: IInputWrapperProps) => (props.width ? props.width : 'auto')};
   height: ${(props: IInputWrapperProps) => (props.height ? props.height : 'auto')};
   gap: 5px;
+  border-radius: 4px;
+
 `;
 
 //Input 컴포넌트 아래에 출력될 헬퍼 텍스트 스타일링
@@ -49,4 +51,5 @@ export const Input = styled.input<IInputProps>`
   font-size: ${(props: IInputProps) => (props.fontSize ? props.fontSize : '14px')};
   color: ${(props: IInputProps) => (props.color ? props.color : '#121212')};
   font-weight: ${(props: IInputProps) => (props.fontWeight ? props.fontWeight : 'normal')};
+ 
 `;
